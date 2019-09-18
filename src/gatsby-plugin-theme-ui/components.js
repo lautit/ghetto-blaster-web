@@ -9,5 +9,7 @@ export default {
     </ProjectCard>
   ),
   // eslint-disable-next-line react/display-name
-  MainTitle: ({ title }) => <ProjectCard title={title}>{children}</ProjectCard>
+  MainTitle: ({ title, children }) => (
+    <ProjectCard title={title}>{children}</ProjectCard>
+  )
 };

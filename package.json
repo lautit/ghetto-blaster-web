@@ -1,11 +1,13 @@
 {
   "private": true,
-  "name": "cara",
-  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
-  "version": "0.0.7",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "name": "ghetto-blaster-web",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Lautaro Tejerina <lautit@gmail.com>",
   "license": "MIT",
-  "starter-name": "gatsby-starter-portfolio-cara",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -16,16 +18,37 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-cara": "^1.0.4",
-    "gatsby": "^2.13.72",
-    "gatsby-plugin-google-analytics": "^2.1.8",
-    "gatsby-plugin-manifest": "^2.2.6",
-    "gatsby-plugin-netlify": "^2.1.6",
-    "gatsby-plugin-offline": "^2.2.7",
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "@mdx-js/mdx": "^1.4.5",
+    "@mdx-js/react": "^1.4.5",
+    "@theme-ui/presets": "^0.2.42",
+    "gatsby": "^2.15.16",
+    "gatsby-plugin-emotion": "^4.1.6",
+    "gatsby-plugin-google-analytics": "^2.1.16",
+    "gatsby-plugin-manifest": "^2.2.16",
+    "gatsby-plugin-mdx": "^1.0.42",
+    "gatsby-plugin-netlify": "^2.1.13",
+    "gatsby-plugin-offline": "^3.0.7",
+    "gatsby-plugin-react-helmet": "^3.1.7",
+    "gatsby-plugin-theme-ui": "^0.2.43",
+    "gatsby-plugin-typescript": "^2.1.8",
+    "gatsby-source-filesystem": "^2.1.22",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27",
+    "theme-ui": "^0.2.43"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "cross-env": "^6.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/lautit/ghetto-blaster-web/issues"
+  },
+  "homepage": "https://www.ghettoblaster.com.ar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lautit/ghetto-blaster-web.git"
   }
 }

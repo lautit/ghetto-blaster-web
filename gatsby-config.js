@@ -23,6 +23,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `ghettoblasterfamilia`,
+        access_token: `788804718226912`
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID

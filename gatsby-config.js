@@ -1,63 +1,71 @@
 require(`dotenv`).config({
-  path: `.env`
+	path: `.env`,
 });
 
 module.exports = {
-  siteMetadata: {
-    siteTitle: `Ghetto Blaster`,
-    siteTitleAlt: `Producciones`,
-    siteHeadline: `Ghetto Blaster Producciones`,
-    siteUrl: `https://www.ghettoblaster.com.ar`,
-    siteDescription: ``,
-    siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
-    author: `@lautit`,
-    basePath: `/`
-  },
-  plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `sections`,
-        path: `${__dirname}/src/sections`
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
-      }
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Ghetto Blaster Producciones`,
-        short_name: `Ghetto Blaster`,
-        description: ``,
-        start_url: `/`,
-        background_color: `#141821`,
-        theme_color: `#f6ad55`,
-        display: `standalone`,
-        icons: [
-          {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`
-          }
-        ]
-      }
-    },
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-theme-ui`
-  ]
+	siteMetadata: {
+		siteTitle: `Ghetto Blaster`,
+		siteTitleAlt: `Producciones`,
+		siteHeadline: `Ghetto Blaster Producciones`,
+		siteUrl: `https://www.ghettoblaster.com.ar`,
+		siteDescription: ``,
+		siteLanguage: `en`,
+		siteImage: `/banner.jpg`,
+		author: `@lautit`,
+		basePath: `/`,
+	},
+	plugins: [
+		{
+			resolve: 'gatsby-plugin-sentry',
+			options: {
+				dsn: 'https://7be4537138e34c209d5757f2b9f4da8b@sentry.io/1772908',
+				environment: process.env.NODE_ENV,
+				enabled: (() => ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `sections`,
+				path: `${__dirname}/src/sections`,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: process.env.GOOGLE_ANALYTICS_ID,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Ghetto Blaster Producciones`,
+				short_name: `Ghetto Blaster`,
+				description: ``,
+				start_url: `/`,
+				background_color: `#141821`,
+				theme_color: `#f6ad55`,
+				display: `standalone`,
+				icons: [
+					{
+						src: `/android-chrome-192x192.png`,
+						sizes: `192x192`,
+						type: `image/png`,
+					},
+					{
+						src: `/android-chrome-512x512.png`,
+						sizes: `512x512`,
+						type: `image/png`,
+					},
+				],
+			},
+		},
+		`gatsby-plugin-mdx`,
+		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-typescript`,
+		`gatsby-plugin-emotion`,
+		`gatsby-plugin-offline`,
+		`gatsby-plugin-netlify`,
+		`gatsby-plugin-theme-ui`,
+	],
 };

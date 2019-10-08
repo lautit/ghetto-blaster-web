@@ -1,10 +1,6 @@
 /** @jsx jsx */
 import { Footer as ThemeFooter, Styled, Flex, useColorMode, jsx } from 'theme-ui';
 
-const throwError = () => {
-	throw new Error('test sentry');
-};
-
 const Footer = () => {
 	const [colorMode, setColorMode] = useColorMode();
 	const isDark = colorMode === `dark`;
@@ -59,7 +55,6 @@ const Footer = () => {
 				<Styled.a aria-label="Link to the theme author's website" href='https://www.lekoarts.de/en'>
 					LekoArts
 				</Styled.a>
-				<button onClick={throwError}>Break the world</button>
 			</Flex>
 		</ThemeFooter>
 	);

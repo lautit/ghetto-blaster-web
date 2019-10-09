@@ -1,34 +1,44 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout } from '../components'
+import Layout from '../components/layout'
+import Gallery from '../components/gallery'
 
-const SocialPage = ({ data: { allInstaNode } }) => {
-    <Layout>
-        {}
-    </Layout>
-};
+const SocialPage = ({ data }) => (
+  <Layout>
+    <Gallery posts={data.allInstagramContent} />
+  </Layout>
+)
 
-export const pageQuery = graphql`
-         query IndexQuery {
-           allInstaNode(filter: { username: { eq: "ghettoblasterfamilia" } }) {
-             edges {
-               node {
-                 id
-                 username
-                 likes
-                 caption
-                 comments
-                 localFile {
-                   childImageSharp {
-                     fluid(quality: 70, maxWidth: 600, maxHeight: 600) {
-                       ...GatsbyImageSharpFluid_withWebp
-                     }
-                   }
-                 }
-               }
-             }
-           }
-         }
-       `;
+export const query = graphql`
+  query InstagramPosts {
+    allInstagramContent {
+      edges {
+        node {
+          link
+          caption {
+            text
+          }
+          localImage {
+            childImageSharp {
+              fluid(maxHeight: 500, maxWidth: 500, quality: 50) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
+          images {
+            standard_resolution {
+              width
+              height
+              url
+            }
+            low_resolution {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
-export default SocialPage;
+export default SocialPage

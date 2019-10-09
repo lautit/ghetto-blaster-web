@@ -8,7 +8,7 @@ upload_dir: public
 public_path: https://www.ghettoblaster.com.ar/.netlify/large-media
 front_matter_path: ''
 use_front_matter_path: 
-file_template: ":filename:"
+file_template: ":filename:_:year:-:month:-:day:"
 build:
   preview_output_directory: public
   install_dependencies_command: npm install

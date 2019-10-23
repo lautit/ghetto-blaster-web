@@ -15,14 +15,15 @@ module.exports = {
     basePath: `/`,
   },
   plugins: [
-		{
-			resolve: 'gatsby-plugin-sentry',
-			options: {
-				dsn: 'https://7be4537138e34c209d5757f2b9f4da8b@sentry.io/1772908',
-				environment: process.env.NODE_ENV,
-				enabled: (() => ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
-			},
-		},
+    {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: 'https://7be4537138e34c209d5757f2b9f4da8b@sentry.io/1772908',
+        environment: process.env.NODE_ENV,
+        enabled: (() =>
+          ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -80,6 +81,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-theme-ui`,
   ],
 }

@@ -9,7 +9,7 @@ const SocialPage = ({ data }) => (
   </Layout>
 )
 
-export const query = graphql`
+export const pageQuery = graphql`
   query InstagramPosts {
     allInstagramContent {
       edges {

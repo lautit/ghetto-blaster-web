@@ -1,15 +1,15 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import Divider from "../elements/divider";
-import Inner from "../elements/inner";
-import Content from "../elements/content";
-import SVG from "./svg";
-import { UpDown, UpDownWide } from "../styles/animations";
-import Intro from "../sections/intro.mdx";
+import { jsx } from 'theme-ui'
+import Divider from '../elements/divider'
+import Inner from '../elements/inner'
+import Content from '../elements/content'
+import SVG from './svg'
+import { UpDown, UpDownWide } from '../styles/animations'
+import Intro from '../sections/intro.mdx'
 
 const Hero = ({ offset }: { offset: number }) => (
   <div>
-    <Divider speed={0.2} offset={offset}>
+    {/* <Divider speed={0.2} offset={offset}>
       <UpDown>
         <SVG
           icon="triangle"
@@ -47,7 +47,7 @@ const Hero = ({ offset }: { offset: number }) => (
           left="90%"
           top="50%"
         />
-        {/*<SVG icon="circle" width={16} color="icon_darker" left="70%" top="90%" />*/}
+        <SVG icon="circle" width={16} color="icon_darker" left="70%" top="90%" />
         <SVG
           icon="triangle"
           width={16}
@@ -64,7 +64,7 @@ const Hero = ({ offset }: { offset: number }) => (
           left="28%"
           top="15%"
         />
-        {/*<SVG icon="circle" width={6} color="icon_darkest" left="75%" top="10%" />*/}
+        <SVG icon="circle" width={6} color="icon_darkest" left="75%" top="10%" />
         <SVG
           icon="upDown"
           hiddenMobile
@@ -74,9 +74,9 @@ const Hero = ({ offset }: { offset: number }) => (
           top="10%"
         />
       </UpDownWide>
-      {/*<SVG icon="circle" hiddenMobile width={24} color="icon_darker" left="5%" top="70%" />*/}
-      {/*<SVG icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />*/}
-      {/*<SVG icon="circle" width={12} color="icon_darkest" left="50%" top="60%" />*/}
+      <SVG icon="circle" hiddenMobile width={24} color="icon_darker" left="5%" top="70%" />
+      <SVG icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
+      <SVG icon="circle" width={12} color="icon_darkest" left="50%" top="60%" />
       <SVG icon="upDown" width={8} color="icon_darkest" left="95%" top="90%" />
       <SVG
         icon="upDown"
@@ -94,7 +94,7 @@ const Hero = ({ offset }: { offset: number }) => (
         left="25%"
         top="5%"
       />
-      {/*<SVG icon="circle" width={64} color="icon_green" left="95%" top="5%" />*/}
+      <SVG icon="circle" width={64} color="icon_green" left="95%" top="5%" />
       <SVG
         icon="box"
         hiddenMobile
@@ -121,13 +121,13 @@ const Hero = ({ offset }: { offset: number }) => (
         left="80%"
         top="70%"
       />
-    </Divider>
+    </Divider>*/}
     <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset}>
-      <Inner>
+      <Inner sx={{ textAlign: `center` }}>
         <Intro />
       </Inner>
     </Content>
   </div>
-);
+)
 
-export default Hero;
+export default Hero

@@ -45,12 +45,12 @@ module.exports = {
         // Add any options here
       },
     },
-    {
-      resolve: `gatsby-source-instagram-all`,
-      options: {
-        access_token: `8395668656.1677ed0.4980badfebc244e198abd05d670a0f40`, //`EAALNaekG7eABADryyexZBiPENELc0zQznWvWb4to1S5E7IRmvqEZCY3QGznZC1GphnQ9zsBAVKHaBq6Rt6NZBJneZBkTcY0g1mPM4W27hXAgtHHHgAaauUwkOOwdYWjjuvaH4rqrTJ9KrTbwRUc3qlgOckfPzuSZC2vEFlxozINAZDZD`
-      },
-    },
+    //{
+    //  resolve: `gatsby-source-instagram-all`,
+    //  options: {
+    //    access_token: `8395668656.1677ed0.4980badfebc244e198abd05d670a0f40`, //`EAALNaekG7eABADryyexZBiPENELc0zQznWvWb4to1S5E7IRmvqEZCY3QGznZC1GphnQ9zsBAVKHaBq6Rt6NZBJneZBkTcY0g1mPM4W27hXAgtHHHgAaauUwkOOwdYWjjuvaH4rqrTJ9KrTbwRUc3qlgOckfPzuSZC2vEFlxozINAZDZD`
+    //  },
+    //},
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

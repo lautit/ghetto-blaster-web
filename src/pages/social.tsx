@@ -4,12 +4,14 @@ import Layout from '../components/layout'
 import Gallery from '../components/gallery'
 
 const SocialPage = ({ data }) => (
+  <Layout></Layout>
+) /*(
   <Layout>
     <Gallery posts={data.allInstagramContent} />
   </Layout>
-)
+)*/
 
-export const query = graphql`
+/*export const query = graphql`
   query InstagramPosts {
     allInstagramContent {
       edges {
@@ -39,6 +41,6 @@ export const query = graphql`
       }
     }
   }
-`
+`*/
 
 export default SocialPage

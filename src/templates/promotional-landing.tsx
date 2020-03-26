@@ -26,14 +26,14 @@ const LogoContainer = styled.div`
 `
 
 const PromotionalLandingPage = ({ data }) => {
-  const { isotype, background } = data
+  const { isotype, isologotype, background } = data
 
   return (
     <Layout>
       <Inner>
         <Menu />
         <LogoContainer>
-          <Img fixed={isotype.childImageSharp.fixed} />
+          <Img fixed={isologotype.childImageSharp.fixed} />
         </LogoContainer>
         <BgContainer>
           <Img fluid={background.childImageSharp.fluid} />
@@ -55,7 +55,7 @@ export const fluidImage = graphql`
 export const fixedImage = graphql`
   fragment fixedImage on File {
     childImageSharp {
-      fixed(width: 433, height: 234) {
+      fixed(width: 316, height: 332) {
         ...GatsbyImageSharpFixed
       }
     }

@@ -12,7 +12,6 @@ const BgContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: -1;
 `
 
 const LogoContainer = styled.div`
@@ -20,9 +19,8 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: stretch;
   align-content: center;
-  position: absolute;
-  top: 40%;
-  left: 40%;
+  padding: 20% 0;
+  background: transparent;
 `
 
 const PromotionalLandingPage = ({ data }) => {
@@ -31,13 +29,13 @@ const PromotionalLandingPage = ({ data }) => {
   return (
     <Layout>
       <Inner>
+        <BgContainer>
+          <Img fluid={background.childImageSharp.fluid} />
+        </BgContainer>
         <Menu />
         <LogoContainer>
           <Img fixed={isologotype.childImageSharp.fixed} />
         </LogoContainer>
-        <BgContainer>
-          <Img fluid={background.childImageSharp.fluid} />
-        </BgContainer>
       </Inner>
     </Layout>
   )

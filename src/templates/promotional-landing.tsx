@@ -19,7 +19,7 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: stretch;
   align-content: center;
-  padding: 20% 0;
+  padding: 10% 0;
   background: transparent;
 `
 

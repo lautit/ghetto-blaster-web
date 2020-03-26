@@ -1,19 +1,43 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import Inner from '../elements/inner'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import Menu from '../components/menu'
 
+const BgContainer = styled.div`
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+`
+
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+`
+
 const PromotionalLandingPage = ({ data }) => {
   const { isotype, background } = data
 
   return (
     <Layout>
-      <Inner sx={{ textAlign: `center` }}>
+      <Inner>
         <Menu />
-        <Img fixed={isotype.childImageSharp.fixed} />
-        <Img fluid={background.childImageSharp.fluid} />
+        <LogoContainer>
+          <Img fixed={isotype.childImageSharp.fixed} />
+        </LogoContainer>
+        <BgContainer>
+          <Img fluid={background.childImageSharp.fluid} />
+        </BgContainer>
       </Inner>
     </Layout>
   )

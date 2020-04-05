@@ -5,6 +5,7 @@ import Inner from '../elements/inner'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import Menu from '../components/menu'
+import SocialBar from '../components/social-bar'
 
 const BgContainer = styled.div`
   top: 0;
@@ -36,6 +37,7 @@ const PromotionalLandingPage = ({ data }) => {
         <LogoContainer>
           <Img fixed={isologotype.childImageSharp.fixed} />
         </LogoContainer>
+        <SocialBar />
       </Inner>
     </Layout>
   )

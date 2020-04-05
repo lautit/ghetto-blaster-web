@@ -25,7 +25,7 @@ const LogoContainer = styled.div`
 `
 
 const PromotionalLandingPage = ({ data }) => {
-  const { isotype, isologotype, background } = data
+  const { isologotype, background } = data
 
   return (
     <Layout>
@@ -66,9 +66,6 @@ export const pageQuery = graphql`
   query getImagesForLanding {
     background: file(relativePath: { eq: "bg_texture_hero.png" }) {
       ...fluidImage
-    }
-    isotype: file(relativePath: { eq: "isotype.png" }) {
-      ...fixedImage
     }
     isologotype: file(relativePath: { eq: "isologotype.png" }) {
       ...fixedImage

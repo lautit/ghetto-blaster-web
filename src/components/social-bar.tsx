@@ -23,8 +23,8 @@ const SocialLink = styled.a`
 
 const SocialIcon = styled.img`
   background: white;
-  border-radius: 0.8rem;
-  padding: 0.8rem;
+  border-radius: 0.6rem;
+  padding: 0.6rem;
 `
 
 const SocialBar = ({ data }) => {

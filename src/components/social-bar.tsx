@@ -4,13 +4,23 @@ import { jsx } from 'theme-ui'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
+const breakpoints = [576, 768, 992, 1200]
+
+const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+
 const SocialContainer = styled.div`
-  position: relative;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-evenly;
-  margin: 25px 20% 0;
   text-align: center;
   background: transparent;
+
+  & a:not(:first-child) {
+    padding-left: 1.5rem;
+  }
 `
 
 const SocialLink = styled.a`
@@ -22,9 +32,12 @@ const SocialLink = styled.a`
 `
 
 const SocialIcon = styled.img`
+  display: block;
+  width: 3.1rem;
   background: white;
   border-radius: 0.6rem;
   padding: 0.6rem;
+  border: black 2px solid;
 `
 
 const SocialBar = ({ data }) => {

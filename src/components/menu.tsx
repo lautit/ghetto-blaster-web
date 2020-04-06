@@ -22,9 +22,7 @@ const MenuTitle = styled.a`
 `
 
 const Menu = () => {
-  const titles = [
-    'Estamos construyendo una mejor experiencia. ¡Probá en nuestras redes sociales!',
-  ]
+  const titles = ['Estamos construyendo una mejor experiencia']
 
   return (
     <MenuContainer>

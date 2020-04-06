@@ -19,6 +19,7 @@
       <img src="https://api.netlify.com/api/v1/badges/88bbaef1-6f83-4894-8acd-e6512ff39265/deploy-status" alt="Netlify Status" />
     </a>
 </p>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2f897068-f538-42e8-a098-5ec8a6083a22/deploy-status)](https://app.netlify.com/sites/ghetto-blaster/deploys)
 
 Playful and Colorful One-Page portfolio featuring Parallax effects and animations. Using the Gatsby Theme [`@lekoarts/gatsby-theme-cara`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara).
 

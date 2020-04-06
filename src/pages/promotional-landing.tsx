@@ -13,6 +13,14 @@ const BgContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
+
+  & .gatsby-image-wrapper {
+    height: 100%;
+  }
+
+  & img {
+    object-fit: cover;
+  }
 `
 
 const LogoContainer = styled.div`
@@ -25,7 +33,7 @@ const LogoContainer = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     max-width: 480px;
     max-height: 530px;
 

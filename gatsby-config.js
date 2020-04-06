@@ -4,12 +4,12 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitle: `Ghetto Blaster`,
-    siteTitleAlt: `Producciones`,
+    siteTitle: `Ghetto Blaster Producciones`,
+    siteTitleAlt: `Ghetto Blaster Familia`,
     siteHeadline: `Ghetto Blaster Producciones`,
     siteUrl: `https://www.ghettoblaster.com.ar`,
     siteDescription: ``,
-    siteLanguage: `en`,
+    siteLanguage: `es`,
     siteImage: `/banner.jpg`,
     author: `@lautit`,
     basePath: `/`,

@@ -1,6 +1,3 @@
----
-title: Tu Mama En Tanga
-date: 2019-10-24T00:22:55.904Z
-description: Es una publicacion de Tu Mamé pero que está En Tanga
----
-ya sabemos como es el cuerpo de tu mama en tanga
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab5770f11c622c6ece1c84c83963b3c218eb04dfca4212e3294f499a0592bd08
+size 186

@@ -16,16 +16,27 @@ const BgContainer = styled.div`
 `
 
 const LogoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  align-content: center;
-  padding: 14% 0;
   background: transparent;
+  height: 70vh;
+  width: 100vw;
+
+  & .gatsby-image-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    max-width: 480px;
+    max-height: 530px;
+
+    @media (max-width: 500px) {
+      max-width: 90vw;
+    }
+  }
 `
 
 const PromotionalLandingPage = ({ data }) => {
-  const { isologotype, background } = data
+  const { logo, background } = data
 
   return (
     <Layout>
@@ -35,7 +46,7 @@ const PromotionalLandingPage = ({ data }) => {
         </BgContainer>
         <Menu />
         <LogoContainer>
-          <Img fixed={isologotype.childImageSharp.fixed} />
+          <Img fluid={logo.childImageSharp.fluid} />
         </LogoContainer>
         <SocialBar />
       </Inner>
@@ -52,11 +63,21 @@ export const fluidImage = graphql`
     }
   }
 `
-export const fixedImage = graphql`
-  fragment fixedImage on File {
+export const fixedLogo = graphql`
+  fragment fixedLogo on File {
     childImageSharp {
-      fixed(width: 316, height: 332) {
+      fixed(width: 480, height: 530) {
         ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
+export const fluidLogo = graphql`
+  fragment fluidLogo on File {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -67,8 +88,8 @@ export const pageQuery = graphql`
     background: file(relativePath: { eq: "bg_texture_hero.png" }) {
       ...fluidImage
     }
-    isologotype: file(relativePath: { eq: "isologotype.png" }) {
-      ...fixedImage
+    logo: file(relativePath: { eq: "logo-negative.png" }) {
+      ...fluidLogo
     }
   }
 `

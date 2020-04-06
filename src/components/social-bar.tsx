@@ -6,7 +6,7 @@ import styled from '@emotion/styled'
 
 const SocialContainer = styled.div`
   position: absolute;
-  bottom: 5%;
+  bottom: 5vh;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -16,6 +16,14 @@ const SocialContainer = styled.div`
 
   & a:not(:first-child) {
     padding-left: 1.5rem;
+
+    @media (max-width: 500px) {
+      padding-left: 0.7rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    bottom: 1vh;
   }
 `
 

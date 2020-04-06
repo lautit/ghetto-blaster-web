@@ -7,10 +7,15 @@ const MenuContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  margin: 25px 20% 0;
+  margin: 5vh 25vw 0;
   border-bottom: 1px white solid;
   text-align: center;
   background: transparent;
+
+  @media (max-width: 500px) {
+    max-height: 30vh;
+    margin: 0 5vw;
+  }
 `
 
 const MenuTitle = styled.a`
@@ -19,6 +24,10 @@ const MenuTitle = styled.a`
   font-variant: all-petite-caps;
   font-size: xx-large;
   font-family: monospace;
+
+  @media (max-width: 500px) {
+    font-size: x-large;
+  }
 `
 
 const Menu = () => {

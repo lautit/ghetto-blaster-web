@@ -34,8 +34,8 @@ const LogoContainer = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
 
-    max-width: 480px;
-    max-height: 530px;
+    max-width: 80vw;
+    max-height: 60vh;
 
     @media (max-width: 500px) {
       max-width: 90vw;
@@ -54,7 +54,13 @@ const PromotionalLandingPage = ({ data }) => {
         </BgContainer>
         <Menu />
         <LogoContainer>
-          <Img fluid={logo.childImageSharp.fluid} />
+          <Img
+            imgStyle={{
+              objectFit: 'contain',
+              objectPosition: '50% 50%',
+            }}
+            fluid={logo.childImageSharp.fluid}
+          />
         </LogoContainer>
         <SocialBar />
       </Inner>
@@ -85,7 +91,7 @@ export const fluidLogo = graphql`
   fragment fluidLogo on File {
     childImageSharp {
       fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }

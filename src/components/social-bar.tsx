@@ -23,7 +23,7 @@ const SocialContainer = styled.div`
   }
 
   @media (max-width: 500px) {
-    bottom: 1vh;
+    bottom: 5vh;
   }
 `
 
@@ -37,11 +37,8 @@ const SocialLink = styled.a`
 
 const SocialIcon = styled.img`
   display: block;
-  width: 3.1rem;
-  background: white;
-  border-radius: 0.6rem;
-  padding: 0.6rem;
-  border: black 2px solid;
+  width: 2.4rem;
+  background: transparent;
 `
 
 const SocialBar = ({ data }) => {
@@ -99,16 +96,16 @@ export default props => (
   <StaticQuery
     query={graphql`
       query getIconsForSocialbar {
-        facebook: file(relativePath: { eq: "icon-facebook.svg" }) {
+        facebook: file(relativePath: { eq: "icon-facebook-circle.svg" }) {
           ...svgIcon
         }
-        youtube: file(relativePath: { eq: "icon-youtube.svg" }) {
+        youtube: file(relativePath: { eq: "icon-youtube-circle.svg" }) {
           ...svgIcon
         }
-        instagram: file(relativePath: { eq: "icon-instagram.svg" }) {
+        instagram: file(relativePath: { eq: "icon-instagram-circle.svg" }) {
           ...svgIcon
         }
-        email: file(relativePath: { eq: "icon-email.svg" }) {
+        email: file(relativePath: { eq: "icon-email-circle.svg" }) {
           ...svgIcon
         }
       }

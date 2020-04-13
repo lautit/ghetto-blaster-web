@@ -35,7 +35,7 @@ const LogoContainer = styled.div`
     transform: translate(-50%, -50%);
 
     max-width: 80vw;
-    max-height: 60vh;
+    max-height: 40vh;
 
     @media (max-width: 500px) {
       max-width: 90vw;
@@ -71,17 +71,8 @@ const PromotionalLandingPage = ({ data }) => {
 export const fluidImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
-      fluid(maxWidth: 1440) {
+      fluid(maxWidth: 1660) {
         ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-export const fixedLogo = graphql`
-  fragment fixedLogo on File {
-    childImageSharp {
-      fixed(width: 480, height: 530) {
-        ...GatsbyImageSharpFixed
       }
     }
   }

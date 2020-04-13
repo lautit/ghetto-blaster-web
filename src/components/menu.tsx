@@ -26,12 +26,13 @@ const MenuTitle = styled.a`
   font-family: monospace;
 
   @media (max-width: 500px) {
+    padding: 5vh 0 0;
     font-size: x-large;
   }
 `
 
 const Menu = () => {
-  const titles = ['Estamos construyendo una mejor experiencia']
+  const titles = ['Estamos en construcción']
 
   return (
     <MenuContainer>

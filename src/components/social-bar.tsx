@@ -46,32 +46,32 @@ const SocialBar = ({ data }) => {
 
   const socialNetworks = [
     {
-      id: 'youtube',
+      id: email.name,
+      link: 'mailto:ghettoblasterproducciones@gmail.com',
+      icon: email.publicURL,
+      alt: 'E-mail',
+    },
+    {
+      id: youtube.name,
       link: 'https://www.youtube.com/ghettoblasterfamilia',
       icon: youtube.publicURL,
       alt: 'YouTube',
     },
     {
-      id: 'facebook',
-      link: 'https://www.facebook.com/ghettoblasterfamilia',
-      icon: facebook.publicURL,
-      alt: 'Facebook',
-    },
-    {
-      id: 'instagram',
+      id: instagram.name,
       link: 'https://www.instagram.com/ghettoblasterfamilia',
       icon: instagram.publicURL,
       alt: 'Instagram',
     },
     {
-      id: 'email',
-      link: 'mailto:ghettoblasterproducciones@gmail.com',
-      icon: email.publicURL,
-      alt: 'E-mail',
+      id: facebook.name,
+      link: 'https://www.facebook.com/ghettoblasterfamilia',
+      icon: facebook.publicURL,
+      alt: 'Facebook',
     },
   ]
 
-  console.log('icons: ', facebook, youtube, instagram, email)
+  console.log(email)
 
   return (
     <SocialContainer>
@@ -89,6 +89,7 @@ const SocialBar = ({ data }) => {
 export const svgIcon = graphql`
   fragment svgIcon on File {
     publicURL
+    name
   }
 `
 
@@ -96,16 +97,16 @@ export default props => (
   <StaticQuery
     query={graphql`
       query getIconsForSocialbar {
-        facebook: file(relativePath: { eq: "icon-facebook-circle.svg" }) {
+        facebook: file(relativePath: { eq: "icons/social/facebook.svg" }) {
           ...svgIcon
         }
-        youtube: file(relativePath: { eq: "icon-youtube-circle.svg" }) {
+        youtube: file(relativePath: { eq: "icons/social/youtube.svg" }) {
           ...svgIcon
         }
-        instagram: file(relativePath: { eq: "icon-instagram-circle.svg" }) {
+        instagram: file(relativePath: { eq: "icons/social/instagram.svg" }) {
           ...svgIcon
         }
-        email: file(relativePath: { eq: "icon-email-circle.svg" }) {
+        email: file(relativePath: { eq: "icons/social/email.svg" }) {
           ...svgIcon
         }
       }

@@ -90,10 +90,10 @@ export const fluidLogo = graphql`
 
 export const pageQuery = graphql`
   query getImagesForLanding {
-    background: file(relativePath: { eq: "bg_texture_hero.png" }) {
+    background: file(relativePath: { eq: "background/texture_hero.png" }) {
       ...fluidImage
     }
-    logo: file(relativePath: { eq: "logo-negative.png" }) {
+    logo: file(relativePath: { eq: "logo/normal-negative.png" }) {
       ...fluidLogo
     }
   }

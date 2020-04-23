@@ -4,31 +4,39 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitle: `Ghetto Blaster`,
-    siteTitleAlt: `Producciones`,
+    siteTitle: `Ghetto Blaster Producciones`,
+    siteTitleAlt: `Ghetto Blaster Familia`,
     siteHeadline: `Ghetto Blaster Producciones`,
     siteUrl: `https://www.ghettoblaster.com.ar`,
     siteDescription: ``,
-    siteLanguage: `en`,
+    siteLanguage: `es`,
     siteImage: `/banner.jpg`,
     author: `@lautit`,
     basePath: `/`,
   },
   plugins: [
-		{
-			resolve: 'gatsby-plugin-sentry',
-			options: {
-				dsn: 'https://7be4537138e34c209d5757f2b9f4da8b@sentry.io/1772908',
-				environment: process.env.NODE_ENV,
-				enabled: (() => ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
-			},
-		},
+    {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: 'https://7be4537138e34c209d5757f2b9f4da8b@sentry.io/1772908',
+        environment: process.env.NODE_ENV,
+        enabled: (() =>
+          ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
+      },
+    },
     `gatsby-plugin-react-helmet`,
+    //{
+    //  resolve: `gatsby-source-filesystem`,
+    //  options: {
+    //    name: `sections`,
+    //    path: `${__dirname}/src/sections`,
+    //  },
+    //},
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `sections`,
-        path: `${__dirname}/src/sections`,
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
       },
     },
     {
@@ -37,12 +45,12 @@ module.exports = {
         // Add any options here
       },
     },
-    {
-      resolve: `gatsby-source-instagram-all`,
-      options: {
-        access_token: `8395668656.1677ed0.4980badfebc244e198abd05d670a0f40`, //`EAALNaekG7eABADryyexZBiPENELc0zQznWvWb4to1S5E7IRmvqEZCY3QGznZC1GphnQ9zsBAVKHaBq6Rt6NZBJneZBkTcY0g1mPM4W27hXAgtHHHgAaauUwkOOwdYWjjuvaH4rqrTJ9KrTbwRUc3qlgOckfPzuSZC2vEFlxozINAZDZD`
-      },
-    },
+    //{
+    //  resolve: `gatsby-source-instagram-all`,
+    //  options: {
+    //    access_token: `8395668656.1677ed0.4980badfebc244e198abd05d670a0f40`, //`EAALNaekG7eABADryyexZBiPENELc0zQznWvWb4to1S5E7IRmvqEZCY3QGznZC1GphnQ9zsBAVKHaBq6Rt6NZBJneZBkTcY0g1mPM4W27hXAgtHHHgAaauUwkOOwdYWjjuvaH4rqrTJ9KrTbwRUc3qlgOckfPzuSZC2vEFlxozINAZDZD`
+    //  },
+    //},
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

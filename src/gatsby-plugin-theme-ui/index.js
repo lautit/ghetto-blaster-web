@@ -10,7 +10,7 @@ export default {
     secondary: tailwind.colors.indigo[6],
     text: tailwind.colors.gray[3],
     heading: tailwind.colors.white,
-    background: `#141821`,
+    background: tailwind.colors.black,
     divider: tailwind.colors.gray[8],
     textMuted: tailwind.colors.gray[5],
     icon_brightest: tailwind.colors.white,

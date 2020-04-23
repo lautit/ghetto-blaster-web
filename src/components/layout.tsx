@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import React from "react"
-import { Global } from "@emotion/core"
-import { css, Styled, jsx } from "theme-ui"
-import SEO from "./seo"
+import React from 'react'
+import { Global } from '@emotion/core'
+import { css, Styled, jsx } from 'theme-ui'
+import SEO from './seo'
 
 type LayoutProps = { children?: React.ReactNode; className?: string }
 
@@ -10,12 +10,12 @@ const Layout = ({ children, className }: LayoutProps) => (
   <Styled.root>
     <Global
       styles={css({
-        "*": {
+        '*': {
           boxSizing: `inherit`,
-          "&:before": {
+          '&:before': {
             boxSizing: `inherit`,
           },
-          "&:after": {
+          '&:after': {
             boxSizing: `inherit`,
           },
         },
@@ -29,8 +29,9 @@ const Layout = ({ children, className }: LayoutProps) => (
           textRendering: `optimizeLegibility`,
           WebkitFontSmoothing: `antialiased`,
           MozOsxFontSmoothing: `grayscale`,
+          overflow: `hidden`,
         },
-        "::selection": {
+        '::selection': {
           backgroundColor: `primary`,
           color: `white`,
         },

@@ -25,13 +25,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `sections`,
-        path: `${__dirname}/src/sections`,
-      },
-    },
+    //{
+    //  resolve: `gatsby-source-filesystem`,
+    //  options: {
+    //    name: `sections`,
+    //    path: `${__dirname}/src/sections`,
+    //  },
+    //},
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -4,8 +4,6 @@ import { jsx } from 'theme-ui'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
-import Social from '../static-content/social.yaml'
-
 const SocialContainer = styled.div`
   position: absolute;
   bottom: 5vh;
@@ -97,16 +95,16 @@ export default (props: JSX.IntrinsicAttributes & { data: any }) => (
   <StaticQuery
     query={graphql`
       query getIconsForSocialbar {
-        email: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
+        email: file(relativePath: { eq: "icons/social/email.svg" }) {
           ...svgIcon
         }
-        youtube: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
+        youtube: file(relativePath: { eq: "icons/social/youtube.svg" }) {
           ...svgIcon
         }
-        instagram: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
+        instagram: file(relativePath: { eq: "icons/social/instagram.svg" }) {
           ...svgIcon
         }
-        facebook: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
+        facebook: file(relativePath: { eq: "icons/social/facebook.svg" }) {
           ...svgIcon
         }
       }

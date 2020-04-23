@@ -1,0 +1,17 @@
+links:
+  - email:
+    link: 'mailto:ghettoblasterproducciones@gmail.com'
+    alt: 'E-mail'
+    relativePath: 'icons/social/email.svg'
+  - youtube:
+    link: 'https://www.youtube.com/ghettoblasterfamilia'
+    alt: 'YouTube'
+    relativePath: 'icons/social/youtube.svg'
+  - instagram:
+    link: 'https://www.instagram.com/ghettoblasterfamilia'
+    alt: 'Instagram'
+    relativePath: 'icons/social/instagram.svg'
+  - facebook:
+    link: 'https://www.facebook.com/ghettoblasterfamilia'
+    alt: 'Facebook'
+    relativePath: 'icons/social/facebook.svg'

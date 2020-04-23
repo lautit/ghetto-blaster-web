@@ -4,6 +4,8 @@ import { jsx } from 'theme-ui'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
+import Social from '../static-content/social.yaml'
+
 const SocialContainer = styled.div`
   position: absolute;
   bottom: 5vh;
@@ -14,7 +16,7 @@ const SocialContainer = styled.div`
   text-align: center;
   background: transparent;
 
-  & a:not(:first-child) {
+  & a:not(:first-of-type) {
     padding-left: 1.5rem;
 
     @media (max-width: 500px) {
@@ -71,8 +73,6 @@ const SocialBar = ({ data }) => {
     },
   ]
 
-  console.log(email)
-
   return (
     <SocialContainer>
       {socialNetworks.map(({ id, link, icon, alt }) => {
@@ -93,20 +93,20 @@ export const svgIcon = graphql`
   }
 `
 
-export default props => (
+export default (props: JSX.IntrinsicAttributes & { data: any }) => (
   <StaticQuery
     query={graphql`
       query getIconsForSocialbar {
-        facebook: file(relativePath: { eq: "icons/social/facebook.svg" }) {
+        email: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
           ...svgIcon
         }
-        youtube: file(relativePath: { eq: "icons/social/youtube.svg" }) {
+        youtube: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
           ...svgIcon
         }
-        instagram: file(relativePath: { eq: "icons/social/instagram.svg" }) {
+        instagram: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
           ...svgIcon
         }
-        email: file(relativePath: { eq: "icons/social/email.svg" }) {
+        facebook: file(relativePath: { eq: ${Social.links["facebook"].relativePath} }) {
           ...svgIcon
         }
       }

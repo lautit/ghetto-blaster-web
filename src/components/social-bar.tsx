@@ -91,7 +91,7 @@ export const svgIcon = graphql`
   }
 `
 
-export default (props: JSX.IntrinsicAttributes & { data: any }) => (
+export default (props: JSX.IntrinsicAttributes) => (
   <StaticQuery
     query={graphql`
       query getIconsForSocialbar {

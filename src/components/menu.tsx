@@ -32,7 +32,14 @@ const MenuTitle = styled.a`
 `
 
 const Menu = () => {
-  const titles = ['Estamos en construcción']
+  const titles = [
+    'Inicio',
+    'Nuestra música',
+    'Servicios',
+    'Portfolio',
+    'Noticias',
+    'Contacto',
+  ]
 
   return (
     <MenuContainer>

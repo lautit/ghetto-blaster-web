@@ -4,14 +4,14 @@ import { graphql } from 'gatsby'
 import Inner from '../elements/inner'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
+import Menu from '../components/menu'
 import SocialBar from '../components/social-bar'
-import { spinAnimation } from '../styles/animations'
 
 const BgContainer = styled.div`
   top: 0;
   left: 0;
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 
   & .gatsby-image-wrapper {
@@ -25,7 +25,7 @@ const BgContainer = styled.div`
 
 const LogoContainer = styled.div`
   background: transparent;
-  height: 90vh;
+  height: 70vh;
   width: 100vw;
 
   & .gatsby-image-wrapper {
@@ -40,15 +40,11 @@ const LogoContainer = styled.div`
     @media (max-width: 500px) {
       max-width: 90vw;
     }
-
-    & img {
-      ${spinAnimation('6s')}
-    }
   }
 `
 
-const PromotionalLandingPage = ({ data }) => {
-  const { vinyl, background } = data
+const LandingPage = ({ data }) => {
+  const { logo, background } = data
 
   return (
     <Layout>
@@ -56,13 +52,14 @@ const PromotionalLandingPage = ({ data }) => {
         <BgContainer>
           <Img fluid={background.childImageSharp.fluid} />
         </BgContainer>
+        <Menu />
         <LogoContainer>
           <Img
             imgStyle={{
               objectFit: 'contain',
               objectPosition: '50% 50%',
             }}
-            fluid={vinyl.childImageSharp.fluid}
+            fluid={logo.childImageSharp.fluid}
           />
         </LogoContainer>
         <SocialBar />
@@ -92,14 +89,14 @@ export const fluidLogo = graphql`
 `
 
 export const pageQuery = graphql`
-  query getImagesForPromoLanding {
+  query getImagesForLanding {
     background: file(relativePath: { eq: "background/texture_hero.png" }) {
       ...fluidImage
     }
-    vinyl: file(relativePath: { eq: "logo/vinyl-landing.png" }) {
+    logo: file(relativePath: { eq: "logo/normal-negative.png" }) {
       ...fluidLogo
     }
   }
 `
 
-export default PromotionalLandingPage
+export default LandingPage

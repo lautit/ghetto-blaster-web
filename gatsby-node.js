@@ -7,6 +7,7 @@ exports.createPages = async ({ actions }, themeOptions) => {
 
   createPage({
     path: basePath,
+    // component: require.resolve(`./src/pages/landing.tsx`),
     component: require.resolve(`./src/pages/promotional-landing.tsx`),
   })
 }
